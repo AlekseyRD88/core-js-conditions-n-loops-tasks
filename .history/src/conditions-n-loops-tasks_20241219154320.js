@@ -215,18 +215,7 @@ function convertNumberToString(numberStr) {
  *  'qweqwe'    => false
  */
 function isPalindrome(str) {
-  let left = 0;
-  let right = str.length - 1;
-
-  while (left < right) {
-    if (str[left] !== str[right]) {
-      return false;
-    }
-    left += 1;
-    right -= 1;
-  }
-
-  return true;
+  throw new Error('Not implemented');
 }
 
 /**
@@ -243,13 +232,8 @@ function isPalindrome(str) {
  *  'qwerty', 'Q'     => -1
  *  'qwerty', 'p'     => -1
  */
-function getIndexOf(str, letter) {
-  for (let i = 0; i < str.length; i += 1) {
-    if (str[i] === letter) {
-      return i;
-    }
-  }
-  return -1;
+function getIndexOf( /* str, letter */ ) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -267,16 +251,8 @@ function getIndexOf(str, letter) {
  *  12345, 0    => false
  *  12345, 6    => false
  */
-function isContainNumber(num, digit) {
-  let number = num;
-  while (number > 0) {
-    const currentDigit = number % 10;
-    if (currentDigit === digit) {
-      return true;
-    }
-    number = Math.floor(number / 10);
-  }
-  return false;
+function isContainNumber( /* num, digit */ ) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -292,24 +268,8 @@ function isContainNumber(num, digit) {
  *  [2, 3, 9, 5] => 2       => 2 + 3 === 5 then balance element is 9 and its index = 2
  *  [1, 2, 3, 4, 5] => -1   => no balance element
  */
-function getBalanceIndex(arr) {
-  const n = arr.length;
-  let leftSum = 0;
-  let rightSum = 0;
-
-  for (let i = 1; i < n; i += 1) {
-    rightSum += arr[i];
-  }
-
-  for (let i = 0; i < n; i += 1) {
-    if (leftSum === rightSum) {
-      return i;
-    }
-    leftSum += arr[i];
-    rightSum -= arr[i + 1];
-  }
-
-  return -1;
+function getBalanceIndex( /* arr */ ) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -333,43 +293,8 @@ function getBalanceIndex(arr) {
  *          [10, 9,  8,  7]
  *        ]
  */
-function getSpiralMatrix(size) {
-  const matrix = new Array(size).fill(0).map(() => new Array(size).fill(0));
-  let rowStart = 0;
-  let rowEnd = size - 1;
-  let colStart = 0;
-  let colEnd = size - 1;
-  const num = 1;
-
-  while (rowStart <= rowEnd && colStart <= colEnd) {
-    // Top row
-    for (let i = colStart; i <= colEnd; i += 1) {
-      matrix[rowStart][i] = num + 1;
-    }
-    rowStart += 1;
-    // Right column
-    for (let i = rowStart; i <= rowEnd; i += 1) {
-      matrix[i][colEnd] = num + 1;
-    }
-    colEnd -= 1;
-
-    // Bottom row
-    if (rowStart <= rowEnd) {
-      for (let i = colEnd; i >= colStart; i -= 1) {
-        matrix[rowEnd][i] = num + 1;
-      }
-      rowEnd -= 1;
-    }
-
-    // Left column
-    if (colStart <= colEnd) {
-      for (let i = rowEnd; i >= rowStart; i -= 1) {
-        matrix[i][colStart] = num + 1;
-      }
-      colStart -= 1;
-    }
-  }
-  return matrix;
+function getSpiralMatrix( /* size */ ) {
+  throw new Error('Not implemented');
 }
 
 /**
